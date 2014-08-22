@@ -1,5 +1,5 @@
-tinychat
-========
+tinycolor
+=========
 
 ![tinycolor usage](http://i.imgur.com/XzqoNAr.gif)
 
@@ -35,7 +35,6 @@ Available colors
 - `magenta`
 - `cyan`
 - `white`
-
 - `bright_` prefix can be added to any color
 
 Installation
