@@ -71,8 +71,10 @@ class C(type):
             raise ColorNotFoundException(color_description)
 
 
-# Trick to use color.red instead of color().red
-class color:
-    __metaclass__ = C
+# Trick to make a metaclass that is both python2 and python3 compatible
+# Syntax: C(class_name, base_classes, new_attribues)
+color = C(str('color'), (), {})
 
+if __name__ == "__main__":
+    print("This is the {} module!".format(color.green("colors")))
 
