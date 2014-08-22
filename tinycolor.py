@@ -33,23 +33,23 @@ class C(type):
         fg_desc, bg_desc = colors_string.split("on") if "on" in colors_string \
                                      else (colors_string, None)
 
-        self.scape_code = self._get_scape_code(fg_desc, bg_desc)
+        self.escape_code = self._get_escape_code(fg_desc, bg_desc)
 
         return self._get_color_string
 
     def _get_color_string(self, string):
         return u"{}{}{}".format(
-            self.scape_code,
+            self.escape_code,
             string,
-            self._get_reset_scape_code()
+            self._get_reset_escape_code()
         )
 
-    def _get_scape_code(self, fg_desc, bg_desc):
+    def _get_escape_code(self, fg_desc, bg_desc):
         fg_code = self._desc_to_code(fg_desc, is_fg=True)
         bg_code = self._desc_to_code(bg_desc, is_fg=False)
         return u"\033[{}m".format(str(fg_code)+((";{}".format(bg_code)) if bg_code else ""))
 
-    def _get_reset_scape_code(self):
+    def _get_reset_escape_code(self):
         return u"\033[0m"
 
     def _desc_to_code(self, color_description, is_fg=True):
