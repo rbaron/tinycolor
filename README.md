@@ -3,7 +3,7 @@ tinycolor
 
 ![tinycolor usage](http://i.imgur.com/XzqoNAr.gif)
 
-tinycolor is a tiny python2 and python3 standalone module for color output for unix terminals. It works by appending [ANSI escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code) to a given string.
+tinycolor is a tiny python2 and python3 standalone module for color output on unix terminals. It works by appending [ANSI escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code) to a given string.
 
 Usage
 -----
@@ -40,7 +40,9 @@ Available colors
 Installation
 ------------
 
-Just drop `tinycolor.py` inside your project and import it as in the example above.
+```bash
+pip install tinycolor
+```
 
 License
 -------
